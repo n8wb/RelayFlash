@@ -8,11 +8,11 @@ r3 = PiRelay.Relay("RELAY3")
 r4 = PiRelay.Relay("RELAY4")
 app = Flask(__name__)
 
-@app.route('/off/<id>')
+@app.route('/off/<_id>')
 def off(_id):
 	PiRelay.Relay("RELAY"+_id).off()
 
-@app.route('/on/<id>')
+@app.route('/on/<_id>')
 def on(_id):
 	PiRelay.Relay("RELAY"+_id).on()
 
